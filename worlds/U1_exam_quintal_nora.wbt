@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.01003563335521562 0.9647157765712544 0.2631021788159141 3.215154701672886
-  position 0.1841626489420665 2.288937163303167 -1.9405378446799384
+  orientation -0.2696054281025459 -0.9423141976419913 -0.19838564983378437 1.3259499238706225
+  position -0.2641329133870507 1.830982044577581 1.0387027590129654
 }
 TexturedBackground {
 }
@@ -122,7 +122,7 @@ Solid {
         }
       ]
     }
-    Transform {
+    DEF HELIX_JOINT Transform {
       translation 0.10999999999999999 1.616749470020171 -0.0708600817773696
       rotation 1 0 0 6.021385901
       children [
@@ -134,10 +134,12 @@ Solid {
         }
         HingeJoint {
           jointParameters HingeJointParameters {
-            anchor 0 -0.05 0.37
+            axis 0 0 1
+            anchor 0 0 -0.37
           }
           endPoint Solid {
-            translation 0 -0.5000000000000002 0.37000000000000005
+            translation 0 -0.5000000000000002 0.37
+            rotation 0 0 1 0
             children [
               Group {
                 children [
@@ -236,6 +238,52 @@ Solid {
                 ]
               }
             ]
+            physics Physics {
+            }
+          }
+        }
+      ]
+    }
+    Transform {
+      translation 0.10999999999999999 1.79221274201389 0.5202129335454423
+      rotation -1 0 0 1.832595747359173
+      children [
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 0 1
+            anchor 0 0.27999999999999997 0
+            minStop -1.5708
+            maxStop 1.5708
+          }
+          endPoint Solid {
+            translation 0 3.8163916471489756e-17 0
+            rotation 0 0 1 0
+            children [
+              Group {
+                children [
+                  Transform {
+                    children [
+                      Shape {
+                        appearance USE COLOR2
+                        geometry USE CYL_B2
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 -0.30000000000000004 0
+                    children [
+                      Shape {
+                        appearance USE COLOR2
+                        geometry Box {
+                          size 0.060000000000000005 0.30000000000000004 0.15
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+            name "solid(1)"
             physics Physics {
             }
           }

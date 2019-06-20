@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.11909498256338287 -0.9873731140369029 -0.10445438624249659 4.830576453847895
-  position 4.060142427984178 1.7776083686528694 0.42895843409986534
+  orientation 0.01003563335521562 0.9647157765712544 0.2631021788159141 3.215154701672886
+  position 0.1841626489420665 2.288937163303167 -1.9405378446799384
 }
 TexturedBackground {
 }
@@ -130,6 +130,114 @@ Solid {
           appearance USE COLOR2
           geometry Box {
             size 0.4 0.30000000000000004 0.7
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            anchor 0 -0.05 0.37
+          }
+          endPoint Solid {
+            translation 0 -0.5000000000000002 0.37000000000000005
+            children [
+              Group {
+                children [
+                  DEF STICK Group {
+                    children [
+                      Transform {
+                        translation 0 0.5700000000000001 -0.7500000000000001
+                        children [
+                          Shape {
+                            appearance USE COLOR2
+                            geometry DEF HELICE Cylinder {
+                              height 0.6
+                              radius 0.02
+                            }
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation 0 0.7999999999999999 -0.7500000000000002
+                        children [
+                          Shape {
+                            appearance USE COLOR2
+                            geometry DEF B-HELIX Box {
+                              size 0.05 0.2 0.05
+                            }
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation 0 0.20000000000000004 -0.75
+                        children [
+                          Shape {
+                            appearance USE COLOR2
+                            geometry USE B-HELIX
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation 0.4800000024933465 0.5199999976984503 0
+                        rotation 0 0 1 1.5707963220000003
+                        children [
+                          DEF STICK Group {
+                            children [
+                              Transform {
+                                translation 0 0.5700000000000001 -0.7500000000000001
+                                children [
+                                  Shape {
+                                    appearance USE COLOR2
+                                    geometry DEF HELICE Cylinder {
+                                      height 0.6
+                                      radius 0.02
+                                    }
+                                  }
+                                ]
+                              }
+                              Transform {
+                                translation 0 0.7999999999999999 -0.7500000000000002
+                                children [
+                                  Shape {
+                                    appearance USE COLOR2
+                                    geometry DEF B-HELIX Box {
+                                      size 0.05 0.2 0.05
+                                    }
+                                  }
+                                ]
+                              }
+                              Transform {
+                                translation 0 0.20000000000000004 -0.75
+                                children [
+                                  Shape {
+                                    appearance USE COLOR2
+                                    geometry USE B-HELIX
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                      Transform {
+                        translation -0.33941127561771217 0.1896342064314547 1.4224732503009818e-16
+                        rotation 0 0 1 5.497787127
+                        children [
+                          USE STICK
+                        ]
+                      }
+                      Transform {
+                        translation 0.3394112519858994 0.1654920642979566 0.003000000000000034
+                        rotation 0 0 1 0.7853981610000004
+                        children [
+                          USE STICK
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+            physics Physics {
+            }
           }
         }
       ]

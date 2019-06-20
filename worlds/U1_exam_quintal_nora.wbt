@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.7485207463227799 -0.6629527242391409 0.014504404444520731 0.05844129943191282
-  position 0.11669071291373707 0.9498728583561455 2.6069858678970834
+  orientation 0.11909498256338287 -0.9873731140369029 -0.10445438624249659 4.830576453847895
+  position 4.060142427984178 1.7776083686528694 0.42895843409986534
 }
 TexturedBackground {
 }
@@ -102,6 +102,35 @@ Solid {
               }
             }
           ]
+        }
+      ]
+    }
+    DEF CIL_BS_HEL Transform {
+      translation 0.11 1.2303791414074259 0.03266754336529336
+      rotation 1 0 0 6.021385901
+      children [
+        Shape {
+          appearance DEF COLOR2 PBRAppearance {
+            baseColor 0.06926070038910506 0.9033340962844282 0.5981841763942931
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.5
+            radius 0.05
+          }
+        }
+      ]
+    }
+    Transform {
+      translation 0.10999999999999999 1.616749470020171 -0.0708600817773696
+      rotation 1 0 0 6.021385901
+      children [
+        Shape {
+          appearance USE COLOR2
+          geometry Box {
+            size 0.4 0.30000000000000004 0.7
+          }
         }
       ]
     }

@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.24419676635188864 0.9317924854116924 0.2685715983375424 4.547354910169889
-  position -2.3212329991296263 2.517037535131247 0.12588220883343737
+  orientation 0.7485207463227799 -0.6629527242391409 0.014504404444520731 0.05844129943191282
+  position 0.11669071291373707 0.9498728583561455 2.6069858678970834
 }
 TexturedBackground {
 }
@@ -12,7 +12,7 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 -0.019318516529918055 -0.005176380886612051
+  translation 0.01 -0.019318516529918055 -0.005176380886612051
   rotation 1 0 0 0.2617993870000007
   children [
     DEF BASE Group {
@@ -88,6 +88,18 @@ Solid {
             Shape {
               appearance USE COLOR_1
               geometry USE CYL_B2
+            }
+          ]
+        }
+        Transform {
+          translation 0.10999999999999999 0.9695791681186925 0.10255103883921242
+          rotation 1 0 0 1.3089969349999997
+          children [
+            Shape {
+              appearance USE COLOR_1
+              geometry Box {
+                size 0.6 0.6 0.05
+              }
             }
           ]
         }

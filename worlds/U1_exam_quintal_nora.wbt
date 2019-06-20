@@ -2,12 +2,87 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.6931032800836722 0.6931032800836722 0.1980295085953349 0.75
-  position 1.2 1.6 2.3
+  orientation -0.1281500903422785 0.9820348415459317 0.13851037627240412 1.621622630323305
+  position 2.3364830394724665 1.0123606955225741 -0.014973982368436223
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 Floor {
+}
+Solid {
+  rotation 1 0 0 0.2617993870000007
+  children [
+    DEF BASE Group {
+      children [
+        Transform {
+          translation -0.015529144882963006 0.465 -0.01
+          rotation 0.7040625396160338 0.09269160524965252 -0.7040626439640607 0.3697100193516104
+          children [
+            Shape {
+              appearance DEF COLOR_1 PBRAppearance {
+                baseColor 0.4451209277485313 0.2500038147554742 0.7499961852445258
+                roughness 1
+                metalness 0
+              }
+              geometry DEF CYL1_BASE Cylinder {
+                height 1
+                radius 0.04
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0.24 0.465 -0.01
+          rotation 0.7040625922383151 -0.09269159843982881 0.7040625922383135 0.36970999234435237
+          children [
+            Shape {
+              appearance USE COLOR_1
+              geometry USE CYL1_BASE
+            }
+          ]
+        }
+        Transform {
+          translation 0.23625184091454932 0.589413428023647 0.4398686009098698
+          rotation -0.9456067617707381 0.12449149153825788 0.30054903198652694 0.8257271908053714
+          children [
+            Shape {
+              appearance USE COLOR_1
+              geometry USE CYL1_BASE
+            }
+          ]
+        }
+        Transform {
+          translation -0.013753706390320128 0.589 0.44
+          rotation -0.9456067520381765 -0.12449149948228833 -0.3005490593172138 0.8257271784334304
+          children [
+            Transform {
+              children [
+                Shape {
+                  appearance USE COLOR_1
+                  geometry USE CYL1_BASE
+                }
+              ]
+            }
+          ]
+        }
+        Transform {
+          translation 0.26 0.47286331418473626 0.21749423450215832
+          rotation -1 0 0 4.974188391359173
+          children [
+            Shape {
+              appearance USE COLOR_1
+              geometry DEF CYL_B2 Cylinder {
+                height 0.55
+                radius 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+        }
+      ]
+    }
+  ]
 }
